@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "blockexamplemod",
+	"version": "${version}",
+	"name": "Block Example Mod",
+	"description": "This mod aims to help new BTA modders.",
+	"authors": [
+		"camoweed_"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"icon": "icon.png",
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "camoweed.blockexamplemod.BlockExampleMod"
+		],
+		"beforeGameStart": [
+          "camoweed.blockexamplemod.BlockExampleMod"
+		],
+		"afterGameStart": [
+          "camoweed.blockexamplemod.BlockExampleMod"
+		],
+		"recipesReady": [
+          "camoweed.blockexamplemod.BlockExampleMod"
+		],
+		"initModels": [
+          "camoweed.blockexamplemod.BlockExampleModels"
+		],
+		"onInitialize": [
+          "camoweed.blockexamplemod.BlockExampleMod"
+		]
+	},
+	"mixins": [
+		"blockexamplemod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=${fabricloader}",
+		"minecraft": "*",
+		"java": ">=${java}"
+	},
+	"suggests": {
+		"modmenu": ">=${modmenu}"
+	}
+}
