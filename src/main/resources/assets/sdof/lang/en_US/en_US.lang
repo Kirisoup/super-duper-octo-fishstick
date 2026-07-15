@@ -1,0 +1,60 @@
+tile.sdof.basic.name = Basic Block
+tile.sdof.basic.desc = A basic block that does nothing without a custom texture.
+tile.sdof.custom.name = Custom Block
+tile.sdof.custom.desc = A custom block with a single texture.
+tile.sdof.rotatable.name = Rotatable Block
+tile.sdof.rotatable.desc = Rotates like a workbench. Unique textures per face.
+tile.sdof.very_rotatable.name = Very Rotatable Block
+tile.sdof.very_rotatable.desc = Rotates like a log.
+tile.sdof.stair.name = stair block
+
+tile.sdof.stone_stair.name = Stone Stairs
+tile.sdof.stone_stair.desc =
+tile.sdof.stone_slab.name = Stone Slab
+tile.sdof.stone_slab.desc =
+
+tile.sdof.limestone_stair.name = Limestone Stairs
+tile.sdof.limestone_stair.desc =
+tile.sdof.limestone_slab.name = Limestone Slab
+tile.sdof.limestone_slab.desc =
+
+tile.sdof.granite_stair.name = Granite Stairs
+tile.sdof.granite_stair.desc =
+tile.sdof.granite_slab.name = Granite Slab
+tile.sdof.granite_slab.desc =
+
+tile.sdof.basalt_stair.name = Basalt Stairs
+tile.sdof.basalt_stair.desc =
+tile.sdof.basalt_slab.name = Basalt Slab
+tile.sdof.basalt_slab.desc =
+
+tile.sdof.permafrost_stair.name = Permafrost Stairs
+tile.sdof.permafrost_stair.desc =
+tile.sdof.permafrost_slab.name = Permafrost Slab
+tile.sdof.permafrost_slab.desc =
+
+tile.sdof.slate_stair.name = Slate Stairs
+tile.sdof.slate_stair.desc =
+tile.sdof.slate_slab.name = Slate Slab
+tile.sdof.slate_slab.desc =
+
+tile.sdof.marble_stair.name = Marble Stairs
+tile.sdof.marble_stair.desc =
+tile.sdof.marble_slab.name = Marble Slab
+tile.sdof.marble_slab.desc =
+
+
+tile.sdof.smooth_sandstone.name = Smooth Sandstone
+tile.sdof.smooth_sandstone.desc =
+tile.sdof.smooth_sandstone_stair.name = Smooth Sandstone Stairs
+tile.sdof.smooth_sandstone_stair.desc =
+tile.sdof.smooth_sandstone_slab.name = Smooth Sandstone Slab
+tile.sdof.smooth_sandstone_slab.desc =
+
+
+tile.sdof.polished_limestone_bricks.name = Polished Limestone Bricks
+tile.sdof.polished_limestone_bricks.desc = limestone bricks but big
+tile.sdof.polished_limestone_bricks_stair.name = Polished Limestone Bricks Stairs
+tile.sdof.polished_limestone_bricks_stair.desc =
+tile.sdof.polished_limestone_bricks_slab.name = Polished Limestone Bricks Slab
+tile.sdof.polished_limestone_bricks_slab.desc =

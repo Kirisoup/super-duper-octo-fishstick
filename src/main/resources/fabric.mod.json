@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "blockexamplemod",
+	"id": "sdof",
 	"version": "${version}",
-	"name": "Block Example Mod",
-	"description": "This mod aims to help new BTA modders.",
+	"name": "Super Duper Octo Fishstick",
+	"description": "This adds building blocks that should be in base BTA but aren't.",
 	"authors": [
-		"camoweed_"
+		"Velvet (@trans_siberian)"
 	],
 	"contact": {
 		"homepage": "",
@@ -16,26 +16,26 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "camoweed.blockexamplemod.BlockExampleMod"
+          "trans_siberian.sdof.SDOF"
 		],
 		"beforeGameStart": [
-          "camoweed.blockexamplemod.BlockExampleMod"
+          "trans_siberian.sdof.SDOF"
 		],
 		"afterGameStart": [
-          "camoweed.blockexamplemod.BlockExampleMod"
+          "trans_siberian.sdof.SDOF"
 		],
 		"recipesReady": [
-          "camoweed.blockexamplemod.BlockExampleMod"
+          "trans_siberian.sdof.SDOF"
 		],
 		"initModels": [
-          "camoweed.blockexamplemod.BlockExampleModels"
+          "trans_siberian.sdof.SDOFModels"
 		],
 		"onInitialize": [
-          "camoweed.blockexamplemod.BlockExampleMod"
+          "trans_siberian.sdof.SDOF"
 		]
 	},
 	"mixins": [
-		"blockexamplemod.mixins.json"
+		"sdof.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=${fabricloader}",
