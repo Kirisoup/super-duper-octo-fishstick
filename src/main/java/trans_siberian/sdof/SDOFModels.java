@@ -139,6 +139,17 @@ public class SDOFModels implements ModelEntrypoint {
 			.setTex("minecraft:block/stone", Side.sides)
 		);
 
+		//polished stone tiles
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_STONE_TILES)
+			.setTex("sdof:block/tiles_polished_stone", Side.sides)
+		);
+
+		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_STONE_TILES_STAIRS)
+		);
+
+		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.POLISHED_STONE_TILES_SLAB)
+		);
+
 	}
 
 	@Override
