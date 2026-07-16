@@ -95,11 +95,25 @@ public class SDOFRecipes {
 
 		RecipeBuilder.Shaped(MOD_ID, "#", "##", "###")
 			.addInput('#', SDOFBlocks.POLISHED_LIMESTONE_BRICKS)
-			.create("marble_stairs", new ItemStack(SDOFBlocks.POLISHED_LIMESTONE_BRICKS_STAIRS, 6));
+			.create("polished_limestone_bricks_stairs", new ItemStack(SDOFBlocks.POLISHED_LIMESTONE_BRICKS_STAIRS, 6));
 
 		RecipeBuilder.Shaped(MOD_ID, "###")
 			.addInput('#', SDOFBlocks.POLISHED_LIMESTONE_BRICKS)
-			.create("marble_slab", new ItemStack(SDOFBlocks.POLISHED_LIMESTONE_BRICKS_SLAB, 6));
+			.create("polished_limestone_bricks_slab", new ItemStack(SDOFBlocks.POLISHED_LIMESTONE_BRICKS_SLAB, 6));
+
+		//polished stone tiles
+
+		RecipeBuilder.Shaped(MOD_ID, "##", "##")
+			.addInput('#', Blocks.SLAB_STONE_POLISHED)
+			.create("polished_stone_tiles", new ItemStack(SDOFBlocks.POLISHED_STONE_TILES, 2));
+
+		RecipeBuilder.Shaped(MOD_ID, "#", "##", "###")
+			.addInput('#', SDOFBlocks.POLISHED_STONE_TILES)
+			.create("polished_stone_tiles_stairs", new ItemStack(SDOFBlocks.POLISHED_STONE_TILES_STAIRS, 6));
+
+		RecipeBuilder.Shaped(MOD_ID, "###")
+			.addInput('#', SDOFBlocks.POLISHED_STONE_TILES)
+			.create("polished_stone_tiles_slab", new ItemStack(SDOFBlocks.POLISHED_STONE_TILES_SLAB, 6));
 
 	}
 }

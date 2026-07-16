@@ -85,6 +85,12 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 	public static Block<BlockLogicStairs> POLISHED_LIMESTONE_BRICKS_STAIRS;
 	public static Block<BlockLogicSlab> POLISHED_LIMESTONE_BRICKS_SLAB;
 
+	//polished stone tiles
+
+	public static Block<?> POLISHED_STONE_TILES;
+	public static Block<BlockLogicStairs> POLISHED_STONE_TILES_STAIRS;
+	public static Block<BlockLogicSlab> POLISHED_STONE_TILES_SLAB;
+
 
 	// the fun part
 	// control + click BlockBuilder for more detailed info
@@ -300,6 +306,28 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 				build("polished_limestone_bricks_slab", "polished_limestone_bricks_slab",newBlockID(),
 				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, POLISHED_LIMESTONE_BRICKS));
+
+		// polished stone tiles
+
+		BlockBuilder PolishedStoneTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			// we will give it a sound too
+			.setBlockSound(BlockSounds.STONE);
+		// new lines are optional. spaces too if you're insane
+		POLISHED_STONE_TILES=PolishedStoneTiles.build("polished_stone_tiles","polished_stone_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder PolishedStoneTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		POLISHED_STONE_TILES_STAIRS=PolishedStoneTilesStairs.
+			// standard building
+				build("polished_stone_tiles_stair", "polished_stone_tiles_stair",newBlockID(),
+				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
+				b -> new BlockLogicStairs(b, POLISHED_STONE_TILES));
+
+		BlockBuilder PolishedStoneTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		POLISHED_STONE_TILES_SLAB=PolishedStoneTilesSlab.
+			// standard building
+				build("polished_stone_tiles_slab", "polished_stone_tiles_slab",newBlockID(),
+				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
+				b -> new BlockLogicSlab(b, POLISHED_STONE_TILES));
 
 	}
 	@Override

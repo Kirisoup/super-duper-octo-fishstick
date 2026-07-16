@@ -53,8 +53,15 @@ tile.sdof.smooth_sandstone_slab.desc =
 
 
 tile.sdof.polished_limestone_bricks.name = Polished Limestone Bricks
-tile.sdof.polished_limestone_bricks.desc = limestone bricks but big
+tile.sdof.polished_limestone_bricks.desc = Limestone Bricks, but big; and polished.
 tile.sdof.polished_limestone_bricks_stair.name = Polished Limestone Bricks Stairs
 tile.sdof.polished_limestone_bricks_stair.desc =
 tile.sdof.polished_limestone_bricks_slab.name = Polished Limestone Bricks Slab
 tile.sdof.polished_limestone_bricks_slab.desc =
+
+tile.sdof.polished_stone_tiles.name = Polished Stone Tiles
+tile.sdof.polished_stone_tiles.desc = <3
+tile.sdof.polished_stone_tiles_stair.name = Polished Stone Tiles Stairs
+tile.sdof.polished_stone_tiles_stair.desc =
+tile.sdof.polished_stone_tiles_slab.name = Polished Stone Tiles Slab
+tile.sdof.polished_stone_tiles_slab.desc =
