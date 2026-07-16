@@ -117,7 +117,7 @@ public class SDOFRecipes {
 		//polished limestone tiles
 		RecipeBuilder.Shaped(MOD_ID, "##", "##")
 			.addInput('#', Blocks.SLAB_LIMESTONE_POLISHED)
-			.create("polished_limestone_tiles", new ItemStack(SDOFBlocks.POLISHED_STONE_TILES, 2));
+			.create("polished_limestone_tiles", new ItemStack(SDOFBlocks.POLISHED_LIMESTONE_TILES, 2));
 
 		RecipeBuilder.Shaped(MOD_ID, "#", "##", "###")
 			.addInput('#', SDOFBlocks.POLISHED_LIMESTONE_TILES)
