@@ -3,9 +3,10 @@
 	"id": "sdof",
 	"version": "${version}",
 	"name": "Super Duper Octo Fishstick",
-	"description": "This adds building blocks that should be in base BTA but aren't.",
+	"description": "This mod adds building blocks that should be in base BTA but aren't.",
 	"authors": [
-		"Velvet (@trans_siberian)"
+		"Velvet (@trans_siberian) - programming",
+		"DianaIsntHere (@dianaisnthere) - textures"
 	],
 	"contact": {
 		"homepage": "",

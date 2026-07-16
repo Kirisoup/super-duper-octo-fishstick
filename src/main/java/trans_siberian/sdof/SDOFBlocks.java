@@ -73,23 +73,51 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 
 
 	//smooth sandstone
-
 	public static Block<?> SMOOTH_SANDSTONE;
 	public static Block<BlockLogicStairs> SMOOTH_SANDSTONE_STAIRS;
 	public static Block<BlockLogicSlab> SMOOTH_SANDSTONE_SLAB;
 
 
 	//polished limestone bricks
-
 	public static Block<?> POLISHED_LIMESTONE_BRICKS;
 	public static Block<BlockLogicStairs> POLISHED_LIMESTONE_BRICKS_STAIRS;
 	public static Block<BlockLogicSlab> POLISHED_LIMESTONE_BRICKS_SLAB;
 
-	//polished stone tiles
 
+	//polished stone tiles
 	public static Block<?> POLISHED_STONE_TILES;
 	public static Block<BlockLogicStairs> POLISHED_STONE_TILES_STAIRS;
 	public static Block<BlockLogicSlab> POLISHED_STONE_TILES_SLAB;
+
+
+	//polished limestone tiles
+	public static Block<?> POLISHED_LIMESTONE_TILES;
+	public static Block<BlockLogicStairs> POLISHED_LIMESTONE_TILES_STAIRS;
+	public static Block<BlockLogicSlab> POLISHED_LIMESTONE_TILES_SLAB;
+
+
+	//polished granite tiles
+	public static Block<?> POLISHED_GRANITE_TILES;
+	public static Block<BlockLogicStairs> POLISHED_GRANITE_TILES_STAIRS;
+	public static Block<BlockLogicSlab> POLISHED_GRANITE_TILES_SLAB;
+
+
+	//polished basalt tiles
+	public static Block<?> POLISHED_BASALT_TILES;
+	public static Block<BlockLogicStairs> POLISHED_BASALT_TILES_STAIRS;
+	public static Block<BlockLogicSlab> POLISHED_BASALT_TILES_SLAB;
+
+
+	//polished marble tiles
+	public static Block<?> POLISHED_MARBLE_TILES;
+	public static Block<BlockLogicStairs> POLISHED_MARBLE_TILES_STAIRS;
+	public static Block<BlockLogicSlab> POLISHED_MARBLE_TILES_SLAB;
+
+
+	//polished checkered tiles
+	public static Block<?> POLISHED_CHECKERED_TILES;
+	public static Block<BlockLogicStairs> POLISHED_CHECKERED_TILES_STAIRS;
+	public static Block<BlockLogicSlab> POLISHED_CHECKERED_TILES_SLAB;
 
 
 	// the fun part
@@ -161,173 +189,209 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 
 
 
-		// ACTUAL BLOCKS START!!!!!
+		////////////////////////////////
+		/// ACTUAL BLOCKS START!!!!! ///
+		////////////////////////////////
 
-		BlockBuilder StoneStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+
+
+		BlockBuilder StoneStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		STONE_STAIRS=StoneStairs.
-			// standard building
 				build("stone_stair", "stone_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, Blocks.STONE));
 
-		BlockBuilder StoneSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder StoneSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		STONE_SLAB=StoneSlab.
-			// standard building
 				build("stone_slab", "stone_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, Blocks.STONE));
 
-		BlockBuilder LimestoneStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder LimestoneStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		LIMESTONE_STAIRS=LimestoneStairs.
-			// standard building
 				build("limestone_stair", "limestone_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, Blocks.LIMESTONE));
 
-		BlockBuilder LimestoneSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder LimestoneSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		LIMESTONE_SLAB=LimestoneSlab.
-			// standard building
 				build("limestone_slab", "limestone_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, Blocks.LIMESTONE));
 
-		BlockBuilder GraniteStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder GraniteStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		GRANITE_STAIRS=GraniteStairs.
-			// standard building
 				build("granite_stair", "granite_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, Blocks.GRANITE));
 
-		BlockBuilder GraniteSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder GraniteSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		GRANITE_SLAB=GraniteSlab.
-			// standard building
 				build("granite_slab", "granite_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, Blocks.GRANITE));
 
-		BlockBuilder BasaltStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder BasaltStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		BASALT_STAIRS=BasaltStairs.
-			// standard building
 				build("basalt_stair", "basalt_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, Blocks.BASALT));
 
-		BlockBuilder BasaltSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder BasaltSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		BASALT_SLAB=BasaltSlab.
-			// standard building
 				build("basalt_slab", "basalt_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, Blocks.BASALT));
 
-		BlockBuilder PermafrostStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder PermafrostStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		PERMAFROST_STAIRS=PermafrostStairs.
-			// standard building
 				build("permafrost_stair", "permafrost_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, Blocks.PERMAFROST));
 
-		BlockBuilder PermafrostSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder PermafrostSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		PERMAFROST_SLAB=PermafrostSlab.
-			// standard building
 				build("permafrost_slab", "permafrost_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, Blocks.PERMAFROST));
 
-		BlockBuilder SlateStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder SlateStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		SLATE_STAIRS=SlateStairs.
-			// standard building
 				build("slate_stair", "slate_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, Blocks.SLATE));
 
-		BlockBuilder SlateSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder SlateSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		SLATE_SLAB=SlateSlab.
-			// standard building
 				build("slate_slab", "slate_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, Blocks.SLATE));
 
-		BlockBuilder MarbleStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder MarbleStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		MARBLE_STAIRS=MarbleStairs.
-			// standard building
 				build("marble_stair", "marble_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, Blocks.MARBLE));
 
-		BlockBuilder MarbleSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder MarbleSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		MARBLE_SLAB=MarbleSlab.
-			// standard building
 				build("marble_slab", "marble_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, Blocks.MARBLE));
 
 
 		// smooth sandstone
-
-		BlockBuilder SmoothSandstone = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
-			// we will give it a sound too
+		BlockBuilder SmoothSandstone = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
 			.setBlockSound(BlockSounds.STONE);
-		// new lines are optional. spaces too if you're insane
 		SMOOTH_SANDSTONE=SmoothSandstone.build("smooth_sandstone","smooth_sandstone",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
 
-		BlockBuilder SmoothSandstoneStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder SmoothSandstoneStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		SMOOTH_SANDSTONE_STAIRS=SmoothSandstoneStairs.
-			// standard building
 				build("smooth_sandstone_stair", "smooth_sandstone_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, SMOOTH_SANDSTONE));
 
-		BlockBuilder SmoothSandstoneSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder SmoothSandstoneSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		SMOOTH_SANDSTONE_SLAB=SmoothSandstoneSlab.
-			// standard building
 				build("smooth_sandstone_slab", "smooth_sandstone_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, SMOOTH_SANDSTONE));
 
 
 		// polished limestone bricks
-
-		BlockBuilder PolishedLimestoneBricks = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
-			// we will give it a sound too
+		BlockBuilder PolishedLimestoneBricks = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
 			.setBlockSound(BlockSounds.STONE);
-		// new lines are optional. spaces too if you're insane
 		POLISHED_LIMESTONE_BRICKS=PolishedLimestoneBricks.build("polished_limestone_bricks","polished_limestone_bricks",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
 
-		BlockBuilder PolishedLimestoneBricksStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder PolishedLimestoneBricksStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		POLISHED_LIMESTONE_BRICKS_STAIRS=PolishedLimestoneBricksStairs.
-			// standard building
 				build("polished_limestone_bricks_stair", "polished_limestone_bricks_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, POLISHED_LIMESTONE_BRICKS));
 
-		BlockBuilder PolishedLimestoneBricksSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder PolishedLimestoneBricksSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		POLISHED_LIMESTONE_BRICKS_SLAB=PolishedLimestoneBricksSlab.
-			// standard building
 				build("polished_limestone_bricks_slab", "polished_limestone_bricks_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, POLISHED_LIMESTONE_BRICKS));
 
-		// polished stone tiles
 
-		BlockBuilder PolishedStoneTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
-			// we will give it a sound too
+		// polished stone tiles
+		BlockBuilder PolishedStoneTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
 			.setBlockSound(BlockSounds.STONE);
-		// new lines are optional. spaces too if you're insane
 		POLISHED_STONE_TILES=PolishedStoneTiles.build("polished_stone_tiles","polished_stone_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
 
-		BlockBuilder PolishedStoneTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder PolishedStoneTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		POLISHED_STONE_TILES_STAIRS=PolishedStoneTilesStairs.
-			// standard building
 				build("polished_stone_tiles_stair", "polished_stone_tiles_stair",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicStairs(b, POLISHED_STONE_TILES));
 
-		BlockBuilder PolishedStoneTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS));
+		BlockBuilder PolishedStoneTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
 		POLISHED_STONE_TILES_SLAB=PolishedStoneTilesSlab.
-			// standard building
 				build("polished_stone_tiles_slab", "polished_stone_tiles_slab",newBlockID(),
-				// need to use another block as a "base" model, can be base game stuff, set to a custom block to chose texture/properties
 				b -> new BlockLogicSlab(b, POLISHED_STONE_TILES));
+
+
+		// polished limestone tiles
+		BlockBuilder PolishedLimestoneTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setBlockSound(BlockSounds.STONE);
+		POLISHED_LIMESTONE_TILES=PolishedLimestoneTiles.build("polished_limestone_tiles","polished_limestone_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder PolishedLimestoneTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_LIMESTONE_TILES_STAIRS=PolishedLimestoneTilesStairs.
+			build("polished_limestone_tiles_stair", "polished_limestone_tiles_stair",newBlockID(),
+				b -> new BlockLogicStairs(b, POLISHED_LIMESTONE_TILES));
+
+		BlockBuilder PolishedLimestoneTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_LIMESTONE_TILES_SLAB=PolishedLimestoneTilesSlab.
+			build("polished_limestone_tiles_slab", "polished_limestone_tiles_slab",newBlockID(),
+				b -> new BlockLogicSlab(b, POLISHED_LIMESTONE_TILES));
+
+
+		// polished granite tiles
+		BlockBuilder PolishedGraniteTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setBlockSound(BlockSounds.STONE);
+		POLISHED_GRANITE_TILES=PolishedGraniteTiles.build("polished_granite_tiles","polished_granite_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder PolishedGraniteTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_GRANITE_TILES_STAIRS=PolishedGraniteTilesStairs.
+			build("polished_granite_tiles_stair", "polished_granite_tiles_stair",newBlockID(),
+				b -> new BlockLogicStairs(b, POLISHED_GRANITE_TILES));
+
+		BlockBuilder PolishedGraniteTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_GRANITE_TILES_SLAB=PolishedGraniteTilesSlab.
+			build("polished_granite_tiles_slab", "polished_granite_tiles_slab",newBlockID(),
+				b -> new BlockLogicSlab(b, POLISHED_GRANITE_TILES));
+
+
+		// polished basalt tiles
+		BlockBuilder PolishedBasaltTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setBlockSound(BlockSounds.STONE);
+		POLISHED_BASALT_TILES=PolishedBasaltTiles.build("polished_basalt_tiles","polished_basalt_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder PolishedBasaltTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_BASALT_TILES_STAIRS=PolishedBasaltTilesStairs.
+			build("polished_basalt_tiles_stair", "polished_basalt_tiles_stair",newBlockID(),
+				b -> new BlockLogicStairs(b, POLISHED_BASALT_TILES));
+
+		BlockBuilder PolishedBasaltTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_BASALT_TILES_SLAB=PolishedBasaltTilesSlab.
+			build("polished_basalt_tiles_slab", "polished_basalt_tiles_slab",newBlockID(),
+				b -> new BlockLogicSlab(b, POLISHED_BASALT_TILES));
+
+
+		// polished marble tiles
+		BlockBuilder PolishedMarbleTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setBlockSound(BlockSounds.STONE);
+		POLISHED_MARBLE_TILES=PolishedMarbleTiles.build("polished_marble_tiles","polished_marble_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder PolishedMarbleTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_MARBLE_TILES_STAIRS=PolishedMarbleTilesStairs.
+			build("polished_marble_tiles_stair", "polished_marble_tiles_stair",newBlockID(),
+				b -> new BlockLogicStairs(b, POLISHED_MARBLE_TILES));
+
+		BlockBuilder PolishedMarbleTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_MARBLE_TILES_SLAB=PolishedMarbleTilesSlab.
+			build("polished_marble_tiles_slab", "polished_marble_tiles_slab",newBlockID(),
+				b -> new BlockLogicSlab(b, POLISHED_MARBLE_TILES));
+
+
+		// polished checkered tiles
+		BlockBuilder PolishedCheckeredTiles = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setBlockSound(BlockSounds.STONE);
+		POLISHED_CHECKERED_TILES=PolishedCheckeredTiles.build("polished_checkered_tiles","polished_checkered_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder PolishedCheckeredTilesStairs = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_CHECKERED_TILES_STAIRS=PolishedCheckeredTilesStairs.
+			build("polished_checkered_tiles_stair", "polished_checkered_tiles_stair",newBlockID(),
+				b -> new BlockLogicStairs(b, POLISHED_CHECKERED_TILES));
+
+		BlockBuilder PolishedCheckeredTilesSlab = new BlockBuilder((MOD_ID)).setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE));
+		POLISHED_CHECKERED_TILES_SLAB=PolishedCheckeredTilesSlab.
+			build("polished_checkered_tiles_slab", "polished_checkered_tiles_slab",newBlockID(),
+				b -> new BlockLogicSlab(b, POLISHED_CHECKERED_TILES));
 
 	}
 	@Override

@@ -59,9 +59,45 @@ tile.sdof.polished_limestone_bricks_stair.desc =
 tile.sdof.polished_limestone_bricks_slab.name = Polished Limestone Bricks Slab
 tile.sdof.polished_limestone_bricks_slab.desc =
 
+
 tile.sdof.polished_stone_tiles.name = Polished Stone Tiles
 tile.sdof.polished_stone_tiles.desc = <3
 tile.sdof.polished_stone_tiles_stair.name = Polished Stone Tiles Stairs
 tile.sdof.polished_stone_tiles_stair.desc =
 tile.sdof.polished_stone_tiles_slab.name = Polished Stone Tiles Slab
 tile.sdof.polished_stone_tiles_slab.desc =
+
+tile.sdof.polished_limestone_tiles.name = Polished Limestone Tiles
+tile.sdof.polished_limestone_tiles.desc = <3
+tile.sdof.polished_limestone_tiles_stair.name = Polished Limestone Tiles Stairs
+tile.sdof.polished_limestone_tiles_stair.desc =
+tile.sdof.polished_limestone_tiles_slab.name = Polished Limestone Tiles Slab
+tile.sdof.polished_limestone_tiles_slab.desc =
+
+tile.sdof.polished_granite_tiles.name = Polished Granite Tiles
+tile.sdof.polished_granite_tiles.desc = <3
+tile.sdof.polished_granite_tiles_stair.name = Polished Granite Tiles Stairs
+tile.sdof.polished_granite_tiles_stair.desc =
+tile.sdof.polished_granite_tiles_slab.name = Polished Granite Tiles Slab
+tile.sdof.polished_granite_tiles_slab.desc =
+
+tile.sdof.polished_basalt_tiles.name = Polished Basalt Tiles
+tile.sdof.polished_basalt_tiles.desc = <3
+tile.sdof.polished_basalt_tiles_stair.name = Polished Basalt Tiles Stairs
+tile.sdof.polished_basalt_tiles_stair.desc =
+tile.sdof.polished_basalt_tiles_slab.name = Polished Basalt Tiles Slab
+tile.sdof.polished_basalt_tiles_slab.desc =
+
+tile.sdof.polished_marble_tiles.name = Polished Marble Tiles
+tile.sdof.polished_marble_tiles.desc = Not porcelain.
+tile.sdof.polished_marble_tiles_stair.name = Polished Marble Tiles Stairs
+tile.sdof.polished_marble_tiles_stair.desc =
+tile.sdof.polished_marble_tiles_slab.name = Polished Marble Tiles Slab
+tile.sdof.polished_marble_tiles_slab.desc =
+
+tile.sdof.polished_checkered_tiles.name = Polished Checkered Tiles
+tile.sdof.polished_checkered_tiles.desc = Look like they belong in a pizzeria. Or a prison infested with alien species.
+tile.sdof.polished_checkered_tiles_stair.name = Polished Marble Tiles Stairs
+tile.sdof.polished_checkered_tiles_stair.desc =
+tile.sdof.polished_checkered_tiles_slab.name = Polished Marble Tiles Slab
+tile.sdof.polished_checkered_tiles_slab.desc =

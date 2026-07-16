@@ -111,7 +111,6 @@ public class SDOFModels implements ModelEntrypoint {
 
 
 		//smooth sandstone
-
 		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.SMOOTH_SANDSTONE)
 			.setTex("minecraft:block/sandstone/top", Side.sides)
 		);
@@ -126,9 +125,8 @@ public class SDOFModels implements ModelEntrypoint {
 
 
 		//polished limestone bricks
-
 		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_LIMESTONE_BRICKS)
-			.setTex("sdof:block/bricks_polished_limestone", Side.sides)
+			.setTex("sdof:block/bricks/bricks_polished_limestone", Side.sides)
 		);
 
 		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_LIMESTONE_BRICKS_STAIRS)
@@ -139,15 +137,76 @@ public class SDOFModels implements ModelEntrypoint {
 			.setTex("minecraft:block/stone", Side.sides)
 		);
 
+
 		//polished stone tiles
 		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_STONE_TILES)
-			.setTex("sdof:block/tiles_polished_stone", Side.sides)
+			.setTex("sdof:block/tiles/tiles_polished_stone", Side.sides)
 		);
 
 		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_STONE_TILES_STAIRS)
 		);
 
 		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.POLISHED_STONE_TILES_SLAB)
+		);
+
+
+		//polished limestone tiles
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_LIMESTONE_TILES)
+			.setTex("sdof:block/tiles/tiles_polished_limestone", Side.sides)
+		);
+
+		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_LIMESTONE_TILES_STAIRS)
+		);
+
+		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.POLISHED_LIMESTONE_TILES_SLAB)
+		);
+
+
+		//polished granite tiles
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_GRANITE_TILES)
+			.setTex("sdof:block/tiles/tiles_polished_granite", Side.sides)
+		);
+
+		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_GRANITE_TILES_STAIRS)
+		);
+
+		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.POLISHED_GRANITE_TILES_SLAB)
+		);
+
+
+		//polished basalt tiles
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_BASALT_TILES)
+			.setTex("sdof:block/tiles/tiles_polished_basalt", Side.sides)
+		);
+
+		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_BASALT_TILES_STAIRS)
+		);
+
+		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.POLISHED_BASALT_TILES_SLAB)
+		);
+
+
+		//polished marble tiles
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_MARBLE_TILES)
+			.setTex("sdof:block/tiles/tiles_polished_marble", Side.sides)
+		);
+
+		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_MARBLE_TILES_STAIRS)
+		);
+
+		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.POLISHED_MARBLE_TILES_SLAB)
+		);
+
+
+		//polished checkered tiles
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.POLISHED_CHECKERED_TILES)
+			.setTex("sdof:block/tiles/tiles_polished_checkered", Side.sides)
+		);
+
+		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.POLISHED_CHECKERED_TILES_STAIRS)
+		);
+
+		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.POLISHED_CHECKERED_TILES_SLAB)
 		);
 
 	}
