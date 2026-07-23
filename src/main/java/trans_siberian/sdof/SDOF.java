@@ -41,7 +41,7 @@ public class SDOF implements ModInitializer, GameStartEntrypoint, RecipeEntrypoi
 
 	@Override
 	public void initNamespaces() {
-		RecipeBuilder.initNameSpace(SDOF.MOD_ID);
-		RecipeBuilder.getRecipeNamespace(SDOF.MOD_ID);
+		RecipeBuilder.initNameSpace(MOD_ID);
+		RecipeBuilder.getRecipeNamespace(MOD_ID);
 	}
 }

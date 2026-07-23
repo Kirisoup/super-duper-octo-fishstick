@@ -2,12 +2,7 @@ package trans_siberian.sdof;
 
 import net.minecraft.core.block.*;
 import net.minecraft.core.item.ItemStack;
-import net.minecraft.core.item.Items;
-//import net.minecraft.core.util.helper.Side;
-//import org.jetbrains.annotations.NotNull;
 import turniplabs.halplibe.helper.RecipeBuilder;
-//import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryCategory;
-//import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryPlacement;
 
 import static trans_siberian.sdof.SDOF.MOD_ID;
 
