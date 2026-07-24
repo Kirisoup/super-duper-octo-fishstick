@@ -1,103 +1,93 @@
-tile.sdof.basic.name = Basic Block
-tile.sdof.basic.desc = A basic block that does nothing without a custom texture.
-tile.sdof.custom.name = Custom Block
-tile.sdof.custom.desc = A custom block with a single texture.
-tile.sdof.rotatable.name = Rotatable Block
-tile.sdof.rotatable.desc = Rotates like a workbench. Unique textures per face.
-tile.sdof.very_rotatable.name = Very Rotatable Block
-tile.sdof.very_rotatable.desc = Rotates like a log.
-tile.sdof.stair.name = stair block
-
 tile.sdof.stone_stair.name = Stone Stairs
-tile.sdof.stone_stair.desc =
+tile.sdof.stone_stair.desc = Stone block used for rapid vertical movement.
 tile.sdof.stone_slab.name = Stone Slab
-tile.sdof.stone_slab.desc =
+tile.sdof.stone_slab.desc = A slab of stone.
 
 tile.sdof.limestone_stair.name = Limestone Stairs
-tile.sdof.limestone_stair.desc =
+tile.sdof.limestone_stair.desc = Limestone block used for rapid vertical movement.
 tile.sdof.limestone_slab.name = Limestone Slab
-tile.sdof.limestone_slab.desc =
+tile.sdof.limestone_slab.desc = A slab of limestone.
 
 tile.sdof.granite_stair.name = Granite Stairs
-tile.sdof.granite_stair.desc =
+tile.sdof.granite_stair.desc = Granite block used for rapid vertical movement.
 tile.sdof.granite_slab.name = Granite Slab
-tile.sdof.granite_slab.desc =
+tile.sdof.granite_slab.desc = A slab of granite.
 
 tile.sdof.basalt_stair.name = Basalt Stairs
-tile.sdof.basalt_stair.desc =
+tile.sdof.basalt_stair.desc = Basalt block used for rapid vertical movement.
 tile.sdof.basalt_slab.name = Basalt Slab
-tile.sdof.basalt_slab.desc =
+tile.sdof.basalt_slab.desc = A slab of basalt.
 
 tile.sdof.permafrost_stair.name = Permafrost Stairs
-tile.sdof.permafrost_stair.desc =
+tile.sdof.permafrost_stair.desc = Permafrost block used for rapid vertical movement.
 tile.sdof.permafrost_slab.name = Permafrost Slab
-tile.sdof.permafrost_slab.desc =
+tile.sdof.permafrost_slab.desc = A slab of permafrost.
 
 tile.sdof.slate_stair.name = Slate Stairs
-tile.sdof.slate_stair.desc =
+tile.sdof.slate_stair.desc = Slate block used for rapid vertical movement.
 tile.sdof.slate_slab.name = Slate Slab
-tile.sdof.slate_slab.desc =
+tile.sdof.slate_slab.desc = A slab of slate.
 
 tile.sdof.marble_stair.name = Marble Stairs
-tile.sdof.marble_stair.desc =
+tile.sdof.marble_stair.desc = Marble block used for rapid vertical movement.
 tile.sdof.marble_slab.name = Marble Slab
-tile.sdof.marble_slab.desc =
+tile.sdof.marble_slab.desc = A slab of marble.
 
 
 tile.sdof.smooth_sandstone.name = Smooth Sandstone
-tile.sdof.smooth_sandstone.desc =
+tile.sdof.smooth_sandstone.desc = Sandstone smelted smooth.
 tile.sdof.smooth_sandstone_stair.name = Smooth Sandstone Stairs
-tile.sdof.smooth_sandstone_stair.desc =
+tile.sdof.smooth_sandstone_stair.desc = Smooth sandstone block used for rapid vertical movement.
 tile.sdof.smooth_sandstone_slab.name = Smooth Sandstone Slab
-tile.sdof.smooth_sandstone_slab.desc =
+tile.sdof.smooth_sandstone_slab.desc = A slab of smooth sandstone.
 
 
 tile.sdof.polished_limestone_bricks.name = Polished Limestone Bricks
 tile.sdof.polished_limestone_bricks.desc = Limestone Bricks, but big; and polished.
 tile.sdof.polished_limestone_bricks_stair.name = Polished Limestone Bricks Stairs
-tile.sdof.polished_limestone_bricks_stair.desc =
+tile.sdof.polished_limestone_bricks_stair.desc = Polished limestone brick block used for rapid vertical movement.
 tile.sdof.polished_limestone_bricks_slab.name = Polished Limestone Bricks Slab
-tile.sdof.polished_limestone_bricks_slab.desc =
+tile.sdof.polished_limestone_bricks_slab.desc = A slab of polished limestone bricks.
 
 
 tile.sdof.polished_stone_tiles.name = Polished Stone Tiles
-tile.sdof.polished_stone_tiles.desc = <3
+tile.sdof.polished_stone_tiles.desc = Lovely tiles of polished stone.
 tile.sdof.polished_stone_tiles_stair.name = Polished Stone Tiles Stairs
-tile.sdof.polished_stone_tiles_stair.desc =
+tile.sdof.polished_stone_tiles_stair.desc = Polished stone tile block used for rapid vertical movement.
 tile.sdof.polished_stone_tiles_slab.name = Polished Stone Tiles Slab
-tile.sdof.polished_stone_tiles_slab.desc =
+tile.sdof.polished_stone_tiles_slab.desc = A slab of polished stone tiles.
 
 tile.sdof.polished_limestone_tiles.name = Polished Limestone Tiles
-tile.sdof.polished_limestone_tiles.desc = <3
+tile.sdof.polished_limestone_tiles.desc = Lovely tiles of polished limestone.
 tile.sdof.polished_limestone_tiles_stair.name = Polished Limestone Tiles Stairs
-tile.sdof.polished_limestone_tiles_stair.desc =
+tile.sdof.polished_limestone_tiles_stair.desc = Polished limestone tile block used for rapid vertical movement.
 tile.sdof.polished_limestone_tiles_slab.name = Polished Limestone Tiles Slab
-tile.sdof.polished_limestone_tiles_slab.desc =
+tile.sdof.polished_limestone_tiles_slab.desc = A slab of polished limestone tiles.
 
 tile.sdof.polished_granite_tiles.name = Polished Granite Tiles
-tile.sdof.polished_granite_tiles.desc = <3
+tile.sdof.polished_granite_tiles.desc = Lovely tiles of polished granite.
 tile.sdof.polished_granite_tiles_stair.name = Polished Granite Tiles Stairs
-tile.sdof.polished_granite_tiles_stair.desc =
+tile.sdof.polished_granite_tiles_stair.desc = Polished granite tile block used for rapid vertical movement.
 tile.sdof.polished_granite_tiles_slab.name = Polished Granite Tiles Slab
-tile.sdof.polished_granite_tiles_slab.desc =
+tile.sdof.polished_granite_tiles_slab.desc = A slab of polished granite tiles.
 
 tile.sdof.polished_basalt_tiles.name = Polished Basalt Tiles
-tile.sdof.polished_basalt_tiles.desc = <3
+tile.sdof.polished_basalt_tiles.desc = Lovely tiles of polished basalt.
 tile.sdof.polished_basalt_tiles_stair.name = Polished Basalt Tiles Stairs
-tile.sdof.polished_basalt_tiles_stair.desc =
+tile.sdof.polished_basalt_tiles_stair.desc = Polished basalt tile block used for rapid vertical movement.
 tile.sdof.polished_basalt_tiles_slab.name = Polished Basalt Tiles Slab
-tile.sdof.polished_basalt_tiles_slab.desc =
+tile.sdof.polished_basalt_tiles_slab.desc = A slab of polished basalt tiles.
 
 tile.sdof.polished_marble_tiles.name = Polished Marble Tiles
 tile.sdof.polished_marble_tiles.desc = Not porcelain.
 tile.sdof.polished_marble_tiles_stair.name = Polished Marble Tiles Stairs
-tile.sdof.polished_marble_tiles_stair.desc =
+tile.sdof.polished_marble_tiles_stair.desc = Polished marble tile block used for rapid vertical movement.
 tile.sdof.polished_marble_tiles_slab.name = Polished Marble Tiles Slab
-tile.sdof.polished_marble_tiles_slab.desc =
+tile.sdof.polished_marble_tiles_slab.desc = A slab of polished marble tiles.
 
 tile.sdof.polished_checkered_tiles.name = Polished Checkered Tiles
 tile.sdof.polished_checkered_tiles.desc = Look like they belong in a pizzeria. Or a prison infested with alien species.
 tile.sdof.polished_checkered_tiles_stair.name = Polished Marble Tiles Stairs
-tile.sdof.polished_checkered_tiles_stair.desc =
+tile.sdof.polished_checkered_tiles_stair.desc = Polished checkered tile block used for rapid vertical movement.
 tile.sdof.polished_checkered_tiles_slab.name = Polished Marble Tiles Slab
-tile.sdof.polished_checkered_tiles_slab.desc =
+tile.sdof.polished_checkered_tiles_slab.desc = A slab of polished checkered tiles.
