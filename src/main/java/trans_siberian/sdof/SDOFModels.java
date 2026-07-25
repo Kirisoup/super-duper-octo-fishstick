@@ -1,19 +1,20 @@
 package trans_siberian.sdof;
 
-import net.minecraft.client.render.EntityRendererDispatcher;
-import net.minecraft.client.render.TileEntityRenderDispatcher;
-import net.minecraft.client.render.block.color.BlockColorDispatcher;
-import net.minecraft.client.render.block.model.*;
-import net.minecraft.client.render.item.model.ItemModelDispatcher;
-import net.minecraft.core.util.helper.Side;
-import turniplabs.halplibe.util.ModelEntrypoint;
+import org.jetbrains.annotations.NotNull;
 
-public class SDOFModels implements ModelEntrypoint {
-	@Override
-	public void initBlockModels(BlockModelDispatcher dispatcher) {
+import net.minecraft.client.render.block.model.*;
+import net.minecraft.core.util.helper.Side;
+
+public class SDOFModels {
+	public static boolean hasInit = false;
+
+	public static void init(final @NotNull BlockModelDispatcher dispatcher) {
 		// texture gooning
 
 		// ACTUAL BLOCKS START!!!!!!
+
+		assert !hasInit : "double initialization";
+		hasInit = true;
 
 		dispatcher.addDispatch(new BlockModelStairs<>(SDOFBlocks.STONE_STAIRS)
 			.setTex("minecraft:block/stone", Side.sides)
@@ -185,27 +186,5 @@ public class SDOFModels implements ModelEntrypoint {
 
 		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.COMPRESSED_COBBLESTONE_SLAB)
 		);
-
-
-	}
-
-	@Override
-	public void initItemModels(ItemModelDispatcher dispatcher) {
-
-	}
-
-	@Override
-	public void initEntityModels(EntityRendererDispatcher dispatcher) {
-
-	}
-
-	@Override
-	public void initTileEntityModels(TileEntityRenderDispatcher dispatcher) {
-
-	}
-
-	@Override
-	public void initBlockColors(BlockColorDispatcher dispatcher) {
-
 	}
 }

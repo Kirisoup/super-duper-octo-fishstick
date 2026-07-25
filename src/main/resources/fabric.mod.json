@@ -17,22 +17,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "trans_siberian.sdof.SDOF"
+			"trans_siberian.sdof.SDOF"
 		],
-		"beforeGameStart": [
-          "trans_siberian.sdof.SDOF"
-		],
-		"afterGameStart": [
-          "trans_siberian.sdof.SDOF"
-		],
-		"recipesReady": [
-          "trans_siberian.sdof.SDOF"
-		],
-		"initModels": [
-          "trans_siberian.sdof.SDOFModels"
-		],
-		"onInitialize": [
-          "trans_siberian.sdof.SDOF"
+		"client": [
+			"trans_siberian.sdof.SDOF"
 		]
 	},
 	"mixins": [
