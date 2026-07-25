@@ -87,7 +87,7 @@ tile.sdof.polished_marble_tiles_slab.desc = A slab of polished marble tiles.
 
 tile.sdof.polished_checkered_tiles.name = Polished Checkered Tiles
 tile.sdof.polished_checkered_tiles.desc = Look like they belong in a pizzeria. Or a prison infested with alien species.
-tile.sdof.polished_checkered_tiles_stair.name = Polished Marble Tiles Stairs
+tile.sdof.polished_checkered_tiles_stair.name = Polished Checkered Tiles Stairs
 tile.sdof.polished_checkered_tiles_stair.desc = Polished checkered tile block used for rapid vertical movement.
-tile.sdof.polished_checkered_tiles_slab.name = Polished Marble Tiles Slab
+tile.sdof.polished_checkered_tiles_slab.name = Polished Checkered Tiles Slab
 tile.sdof.polished_checkered_tiles_slab.desc = A slab of polished checkered tiles.

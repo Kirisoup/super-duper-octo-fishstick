@@ -172,6 +172,21 @@ public class SDOFModels implements ModelEntrypoint {
 		);
 
 
+		//compressed cobblestone
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.COMPRESSED_COBBLESTONE)
+			.setTex("minecraft:block/furnace_stone/top", Side.sides)
+		);
+
+		dispatcher.addDispatch(new BlockModelStandard<>(SDOFBlocks.COMPRESSED_COBBLESTONE_CARVED)
+			.setTex("sdof:block/compressed/carved_compact_cobblestone", Side.sides)
+			.setTex("minecraft:block/furnace_stone/top", Side.TOP)
+			.setTex("minecraft:block/furnace_stone/top", Side.BOTTOM)
+		);
+
+		dispatcher.addDispatch(new BlockModelSlab<>(SDOFBlocks.COMPRESSED_COBBLESTONE_SLAB)
+		);
+
+
 	}
 
 	@Override

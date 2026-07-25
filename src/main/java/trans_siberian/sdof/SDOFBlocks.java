@@ -1,6 +1,8 @@
 package trans_siberian.sdof;
 
 import net.minecraft.core.block.*;
+import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.item.Items;
 import net.minecraft.core.block.material.Materials;
 import net.minecraft.core.block.tag.BlockTags;
 import turniplabs.halplibe.helper.BlockBuilder;
@@ -108,6 +110,20 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 	public static Block<?> POLISHED_CHECKERED_TILES;
 	public static Block<BlockLogicStairs> POLISHED_CHECKERED_TILES_STAIRS;
 	public static Block<BlockLogicSlab> POLISHED_CHECKERED_TILES_SLAB;
+
+
+	//compressed cobblestone
+	public static Block<?> COMPRESSED_COBBLESTONE;
+	public static Block<?> COMPRESSED_COBBLESTONE_CARVED;
+	public static Block<BlockLogicSlab> COMPRESSED_COBBLESTONE_SLAB;
+
+
+	//compressed mossy cobblestone
+	public static Block<?> COMPRESSED_COBBLESTONE_MOSSY;
+	public static Block<?> COMPRESSED_COBBLESTONE_MOSSY_CARVED;
+	public static Block<BlockLogicSlab> COMPRESSED_COBBLESTONE_MOSSY_SLAB;
+
+
 
 	// the fun part
 	// control + click BlockBuilder for more detailed info
@@ -425,6 +441,28 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 		POLISHED_CHECKERED_TILES_SLAB=PolishedCheckeredTilesSlab.
 			build("polished_checkered_tiles_slab", "polished_checkered_tiles_slab",newBlockID(),
 				b -> new BlockLogicSlab(b, POLISHED_CHECKERED_TILES));
+
+
+		// compressed cobblestone
+		BlockBuilder CompressedCobblestone = new BlockBuilder((MOD_ID))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setHardness(1.5F)
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
+		COMPRESSED_COBBLESTONE=CompressedCobblestone.build("compressed_cobblestone","compressed_cobblestone",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder CompressedCobblestoneCarved = new BlockBuilder((MOD_ID))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setHardness(1.5F)
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
+		COMPRESSED_COBBLESTONE_CARVED=CompressedCobblestoneCarved.build("compressed_cobblestone_carved","compressed_cobblestone_carved",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
+
+		BlockBuilder CompressedCobblestoneSlab = new BlockBuilder((MOD_ID))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setHardness(1.5F)
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
+		COMPRESSED_COBBLESTONE_SLAB=CompressedCobblestoneSlab.
+			build("compressed_cobblestone_slab", "compressed_cobblestone_slab",newBlockID(),
+				b -> new BlockLogicSlab(b, COMPRESSED_COBBLESTONE_CARVED));
 
 	}
 	@Override
