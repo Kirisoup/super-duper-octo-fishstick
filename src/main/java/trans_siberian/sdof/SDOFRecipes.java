@@ -9,7 +9,12 @@ import static trans_siberian.sdof.SDOF.MOD_ID;
 public class SDOFRecipes {
 	private SDOFRecipes(){}
 
+	public static boolean hasInit = false;
+
 	public static void init(){
+		assert !hasInit : "double initialization";
+		hasInit = true;
+
 		RecipeBuilder.Shaped(MOD_ID, "#", "##", "###")
 			.addInput('#', Blocks.STONE)
 			.create("stone_stairs", new ItemStack(SDOFBlocks.STONE_STAIRS, 6));
@@ -179,5 +184,6 @@ public class SDOFRecipes {
 			.addInput('#', SDOFBlocks.POLISHED_MARBLE_TILES)
 			.create("polished_checkered_tiles_slab", new ItemStack(SDOFBlocks.POLISHED_CHECKERED_TILES_SLAB, 6));
 
+		SDOF.LOGGER.info("SDOF recipes initialized");
 	}
 }

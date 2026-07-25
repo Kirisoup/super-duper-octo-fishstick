@@ -1,14 +1,11 @@
 package trans_siberian.sdof;
 
 import net.minecraft.core.block.*;
-import net.minecraft.core.item.ItemStack;
-import net.minecraft.core.item.Items;
 import net.minecraft.core.block.material.Materials;
 import net.minecraft.core.block.tag.BlockTags;
 import turniplabs.halplibe.helper.BlockBuilder;
 import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryCategory;
 import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryPlacement;
-import turniplabs.halplibe.util.BlockInitEntrypoint;
 
 import static trans_siberian.sdof.SDOF.MOD_ID;
 
@@ -18,7 +15,7 @@ import static trans_siberian.sdof.SDOF.MOD_ID;
 
 */
 // implement BlockInitEntrypoint
-public class SDOFBlocks implements BlockInitEntrypoint {
+public class SDOFBlocks {
 
 	// we will create a couple extra functions
 
@@ -33,13 +30,6 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 
 	// this will allow us to initialize blocks in BlockExampleMod.java
 	public static boolean hasInit = false;
-	public static void init() {
-		if (!hasInit) {
-			hasInit = true;
-			initializeBlocks();
-		}
-	}
-	// we need to declare our blocks
 
 	// ACTUAL BLOCKS START!!!!!!
 	public static Block<BlockLogicStairs> STONE_STAIRS;
@@ -128,13 +118,14 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 	// the fun part
 	// control + click BlockBuilder for more detailed info
 	// there is WAY more in the BlockBuilder class so definitely investigate
-	private static void initializeBlocks() {
+	public static void init() {
 
 		////////////////////////////////
 		/// ACTUAL BLOCKS START!!!!! ///
 		////////////////////////////////
 
-
+		assert !hasInit : "double initialization";
+		hasInit = true;
 
 		BlockBuilder StoneStairs = new BlockBuilder((MOD_ID))
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
@@ -464,9 +455,6 @@ public class SDOFBlocks implements BlockInitEntrypoint {
 			build("compressed_cobblestone_slab", "compressed_cobblestone_slab",newBlockID(),
 				b -> new BlockLogicSlab(b, COMPRESSED_COBBLESTONE_CARVED));
 
-	}
-	@Override
-	public void afterBlockInit() {
-
+		SDOF.LOGGER.info("SDOF blocks initialized");
 	}
 }
