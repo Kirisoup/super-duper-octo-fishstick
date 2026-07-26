@@ -173,15 +173,6 @@ public class SDOFBlocks {
 	public static Block<?> VENT_BLOCK;
 
 
-	// add more definitions if we have blocks that aren't stones
-	private static final BlockMetaDefinition STONE_ISH = new BlockMetaDefinition(
-		Materials.STONE,
-		new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-	);
-
 	private static <Logic extends BlockLogic> @NotNull Block<Logic> make(
 		final @NotNull BlockDefinition<Logic> definition
 	) {
@@ -206,233 +197,134 @@ public class SDOFBlocks {
 		/// STONE STAIRS AND SLABS ///
 		//////////////////////////////
 
+		final var stones = new BlockMetaDefinition.WithMaterial(Materials.STONE, new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
+			.setHardness(1.5F)
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+			.setBlockSound(BlockSounds.STONE));
+
 		// 		STONE_STAIRS                     = make(STONE_ISH.stairs("stone_stair", Blocks.STONE));
-		STONE_SLAB                       = make(STONE_ISH.slab("stone_slab", Blocks.STONE));
-		LIMESTONE_STAIRS                 = make(STONE_ISH.stairs("limestone_stair", Blocks.LIMESTONE));
-		LIMESTONE_SLAB                   = make(STONE_ISH.slab("limestone_slab", Blocks.LIMESTONE));
-		GRANITE_STAIRS                   = make(STONE_ISH.stairs("granite_stair", Blocks.GRANITE));
-		GRANITE_SLAB                     = make(STONE_ISH.slab("granite_slab", Blocks.GRANITE));
-		BASALT_STAIRS                    = make(STONE_ISH.stairs("basalt_stair", Blocks.BASALT));
-		BASALT_SLAB                      = make(STONE_ISH.slab("basalt_slab", Blocks.BASALT));
-		PERMAFROST_STAIRS                = make(STONE_ISH.stairs("permafrost_stair", Blocks.PERMAFROST));
-		PERMAFROST_SLAB                  = make(STONE_ISH.slab("permafrost_slab", Blocks.PERMAFROST));
-		SLATE_STAIRS                     = make(STONE_ISH.stairs("slate_stair", Blocks.SLATE));
-		SLATE_SLAB                       = make(STONE_ISH.slab("slate_slab", Blocks.SLATE));
-		MARBLE_STAIRS                    = make(STONE_ISH.stairs("marble_stair", Blocks.MARBLE));
-		MARBLE_SLAB                      = make(STONE_ISH.slab("marble_slab", Blocks.MARBLE));
+		STONE_SLAB                       = make(stones.slab("stone_slab", Blocks.STONE));
+		LIMESTONE_STAIRS                 = make(stones.stairs("limestone_stair", Blocks.LIMESTONE));
+		LIMESTONE_SLAB                   = make(stones.slab("limestone_slab", Blocks.LIMESTONE));
+		GRANITE_STAIRS                   = make(stones.stairs("granite_stair", Blocks.GRANITE));
+		GRANITE_SLAB                     = make(stones.slab("granite_slab", Blocks.GRANITE));
+		BASALT_STAIRS                    = make(stones.stairs("basalt_stair", Blocks.BASALT));
+		BASALT_SLAB                      = make(stones.slab("basalt_slab", Blocks.BASALT));
+		PERMAFROST_STAIRS                = make(stones.stairs("permafrost_stair", Blocks.PERMAFROST));
+		PERMAFROST_SLAB                  = make(stones.slab("permafrost_slab", Blocks.PERMAFROST));
+		SLATE_STAIRS                     = make(stones.stairs("slate_stair", Blocks.SLATE));
+		SLATE_SLAB                       = make(stones.slab("slate_slab", Blocks.SLATE));
+		MARBLE_STAIRS                    = make(stones.stairs("marble_stair", Blocks.MARBLE));
+		MARBLE_SLAB                      = make(stones.slab("marble_slab", Blocks.MARBLE));
+
 
 		////////////////////////////////////////////////////
 		/// SMOOTH SANDSTONE & POLISHED LIMESTONE BRICKS ///
 		////////////////////////////////////////////////////
 
-
 		// smooth sandstone
-		SMOOTH_SANDSTONE                 = make(STONE_ISH.simple("smooth_sandstone"));
-		SMOOTH_SANDSTONE_STAIRS          = make(STONE_ISH.stairs("smooth_sandstone_stair", SMOOTH_SANDSTONE));
-		SMOOTH_SANDSTONE_SLAB            = make(STONE_ISH.slab("smooth_sandstone_slab", SMOOTH_SANDSTONE));
+		SMOOTH_SANDSTONE                 = make(stones.simple("smooth_sandstone"));
+		SMOOTH_SANDSTONE_STAIRS          = make(stones.stairs("smooth_sandstone_stair", SMOOTH_SANDSTONE));
+		SMOOTH_SANDSTONE_SLAB            = make(stones.slab("smooth_sandstone_slab", SMOOTH_SANDSTONE));
 
 
 		// polished limestone bricks
-		POLISHED_LIMESTONE_BRICKS        = make(STONE_ISH.bricks("polished_limestone_bricks", Blocks.LIMESTONE_POLISHED));
-		POLISHED_LIMESTONE_BRICKS_STAIRS = make(STONE_ISH.stairs("polished_limestone_bricks_stair", POLISHED_LIMESTONE_BRICKS));
-		POLISHED_LIMESTONE_BRICKS_SLAB   = make(STONE_ISH.slab("polished_limestone_bricks_slab", POLISHED_LIMESTONE_BRICKS));
+		POLISHED_LIMESTONE_BRICKS        = make(stones.bricks("polished_limestone_bricks", Blocks.LIMESTONE_POLISHED));
+		POLISHED_LIMESTONE_BRICKS_STAIRS = make(stones.stairs("polished_limestone_bricks_stair", POLISHED_LIMESTONE_BRICKS));
+		POLISHED_LIMESTONE_BRICKS_SLAB   = make(stones.slab("polished_limestone_bricks_slab", POLISHED_LIMESTONE_BRICKS));
+
 
 		//////////////////////
 		/// POLISHED TILES ///
 		//////////////////////
 
-
 		// polished stone tiles
-		POLISHED_STONE_TILES             = make(STONE_ISH.tiles("polished_stone_tiles", Blocks.SLAB_STONE_POLISHED));
-		POLISHED_STONE_TILES_STAIRS      = make(STONE_ISH.stairs("polished_stone_tiles_stair", POLISHED_STONE_TILES));
-		POLISHED_STONE_TILES_SLAB        = make(STONE_ISH.slab("polished_stone_tiles_slab", POLISHED_STONE_TILES));
+		POLISHED_STONE_TILES             = make(stones.tiles("polished_stone_tiles", Blocks.SLAB_STONE_POLISHED));
+		POLISHED_STONE_TILES_STAIRS      = make(stones.stairs("polished_stone_tiles_stair", POLISHED_STONE_TILES));
+		POLISHED_STONE_TILES_SLAB        = make(stones.slab("polished_stone_tiles_slab", POLISHED_STONE_TILES));
 
 		// polished limestone tiles
-		POLISHED_LIMESTONE_TILES         = make(STONE_ISH.tiles("polished_limestone_tiles", Blocks.SLAB_LIMESTONE_POLISHED));
-		POLISHED_LIMESTONE_TILES_STAIRS  = make(STONE_ISH.stairs("polished_limestone_tiles_stair", POLISHED_LIMESTONE_TILES));
-		POLISHED_LIMESTONE_TILES_SLAB    = make(STONE_ISH.slab("polished_limestone_tiles_slab", POLISHED_LIMESTONE_TILES));
+		POLISHED_LIMESTONE_TILES         = make(stones.tiles("polished_limestone_tiles", Blocks.SLAB_LIMESTONE_POLISHED));
+		POLISHED_LIMESTONE_TILES_STAIRS  = make(stones.stairs("polished_limestone_tiles_stair", POLISHED_LIMESTONE_TILES));
+		POLISHED_LIMESTONE_TILES_SLAB    = make(stones.slab("polished_limestone_tiles_slab", POLISHED_LIMESTONE_TILES));
 
 		// polished granite tiles
-		POLISHED_GRANITE_TILES           = make(STONE_ISH.tiles("polished_granite_tiles", Blocks.SLAB_GRANITE_POLISHED));
-		POLISHED_GRANITE_TILES_STAIRS    = make(STONE_ISH.stairs("polished_granite_tiles_stair", POLISHED_GRANITE_TILES));
-		POLISHED_GRANITE_TILES_SLAB      = make(STONE_ISH.slab("polished_granite_tiles_slab", POLISHED_GRANITE_TILES));
+		POLISHED_GRANITE_TILES           = make(stones.tiles("polished_granite_tiles", Blocks.SLAB_GRANITE_POLISHED));
+		POLISHED_GRANITE_TILES_STAIRS    = make(stones.stairs("polished_granite_tiles_stair", POLISHED_GRANITE_TILES));
+		POLISHED_GRANITE_TILES_SLAB      = make(stones.slab("polished_granite_tiles_slab", POLISHED_GRANITE_TILES));
 
 		// polished basalt tiles
-		POLISHED_BASALT_TILES            = make(STONE_ISH.tiles("polished_basalt_tiles", Blocks.SLAB_BASALT_POLISHED));
-		POLISHED_BASALT_TILES_STAIRS     = make(STONE_ISH.stairs("polished_basalt_tiles_stair", POLISHED_BASALT_TILES));
-		POLISHED_BASALT_TILES_SLAB       = make(STONE_ISH.slab("polished_basalt_tiles_slab", POLISHED_BASALT_TILES));
+		POLISHED_BASALT_TILES            = make(stones.tiles("polished_basalt_tiles", Blocks.SLAB_BASALT_POLISHED));
+		POLISHED_BASALT_TILES_STAIRS     = make(stones.stairs("polished_basalt_tiles_stair", POLISHED_BASALT_TILES));
+		POLISHED_BASALT_TILES_SLAB       = make(stones.slab("polished_basalt_tiles_slab", POLISHED_BASALT_TILES));
 
 		// polished marble tiles
-		POLISHED_MARBLE_TILES            = make(STONE_ISH.tiles("polished_marble_tiles", Blocks.SLAB_BRICK_MARBLE));
-		POLISHED_MARBLE_TILES_STAIRS     = make(STONE_ISH.stairs("polished_marble_tiles_stair", POLISHED_MARBLE_TILES));
-		POLISHED_MARBLE_TILES_SLAB       = make(STONE_ISH.slab("polished_marble_tiles_slab", POLISHED_MARBLE_TILES));
+		POLISHED_MARBLE_TILES            = make(stones.tiles("polished_marble_tiles", Blocks.SLAB_BRICK_MARBLE));
+		POLISHED_MARBLE_TILES_STAIRS     = make(stones.stairs("polished_marble_tiles_stair", POLISHED_MARBLE_TILES));
+		POLISHED_MARBLE_TILES_SLAB       = make(stones.slab("polished_marble_tiles_slab", POLISHED_MARBLE_TILES));
 
 		// polished checkered tiles
-		POLISHED_CHECKERED_TILES         = make(STONE_ISH.simple("polished_checkered_tiles"));
-		POLISHED_CHECKERED_TILES_STAIRS  = make(STONE_ISH.stairs("polished_checkered_tiles_stair", POLISHED_CHECKERED_TILES));
-		POLISHED_CHECKERED_TILES_SLAB    = make(STONE_ISH.slab("polished_checkered_tiles_slab", POLISHED_CHECKERED_TILES));
+		POLISHED_CHECKERED_TILES         = make(stones.simple("polished_checkered_tiles"));
+		POLISHED_CHECKERED_TILES_STAIRS  = make(stones.stairs("polished_checkered_tiles_stair", POLISHED_CHECKERED_TILES));
+		POLISHED_CHECKERED_TILES_SLAB    = make(stones.slab("polished_checkered_tiles_slab", POLISHED_CHECKERED_TILES));
+
 
 		///////////////////
 		/// COMPRESSEDS ///
 		///////////////////
 
+		final var compresseds = new BlockMetaDefinition.WithMaterial(Materials.STONE, stones.builder.clone()
+			.setHardness(0.8F));
 
 		// compressed cobblestone
-		COMPRESSED_COBBLESTONE           = make(STONE_ISH.simple("compressed_cobblestone"));
-		COMPRESSED_COBBLESTONE_CARVED    = make(STONE_ISH.simple("compressed_cobblestone_carved"));
-		COMPRESSED_COBBLESTONE_SLAB      = make(STONE_ISH.slab("compressed_cobblestone_slab", COMPRESSED_COBBLESTONE_CARVED));
-
+		COMPRESSED_COBBLESTONE                = make(compresseds.simple("compressed_cobblestone"));
+		COMPRESSED_COBBLESTONE_CARVED         = make(compresseds.simple("compressed_cobblestone_carved"));
+		COMPRESSED_COBBLESTONE_SLAB           = make(compresseds.slab("compressed_cobblestone_slab", COMPRESSED_COBBLESTONE_CARVED));
 
 		// compressed mossy cobblestone
-		BlockBuilder CompressedCobblestoneMossy = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_COBBLESTONE_MOSSY=CompressedCobblestoneMossy.build("compressed_cobblestone_mossy","compressed_cobblestone_mossy",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder CompressedCobblestoneMossyCarved = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_COBBLESTONE_MOSSY_CARVED=CompressedCobblestoneMossyCarved.build("compressed_cobblestone_mossy_carved","compressed_cobblestone_mossy_carved",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder CompressedCobblestoneMossySlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_COBBLESTONE_MOSSY_SLAB=CompressedCobblestoneMossySlab.
-			build("compressed_cobblestone_mossy_slab", "compressed_cobblestone_mossy_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, COMPRESSED_COBBLESTONE_MOSSY_CARVED));
-
+		COMPRESSED_COBBLESTONE_MOSSY          = make(compresseds.simple("compressed_cobblestone_mossy"));
+		COMPRESSED_COBBLESTONE_MOSSY_CARVED   = make(compresseds.simple("compressed_cobblestone_mossy_carved"));
+		COMPRESSED_COBBLESTONE_MOSSY_SLAB     = make(compresseds.slab("compressed_cobblestone_mossy_slab", COMPRESSED_COBBLESTONE_MOSSY_CARVED));
 
 		// compressed polished stone
-		BlockBuilder CompressedPolishedStone = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_STONE=CompressedPolishedStone.build("compressed_polished_stone","compressed_polished_stone",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder CompressedPolishedStoneCarved = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_STONE_CARVED=CompressedPolishedStoneCarved.build("compressed_polished_stone_carved","compressed_polished_stone_carved",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder CompressedPolishedStoneSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_STONE_SLAB=CompressedPolishedStoneSlab.
-			build("compressed_polished_stone_slab", "compressed_polished_stone_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, COMPRESSED_POLISHED_STONE_CARVED));
-
+		COMPRESSED_POLISHED_STONE             = make(compresseds.simple("compressed_polished_stone"));
+		COMPRESSED_POLISHED_STONE_CARVED      = make(compresseds.simple("compressed_polished_stone_carved"));
+		COMPRESSED_POLISHED_STONE_SLAB        = make(compresseds.slab("compressed_polished_stone_slab", COMPRESSED_POLISHED_STONE_CARVED));
 
 		// compressed polished stone tiles
-			BlockBuilder CompressedPolishedStoneTiles = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_STONE_TILES=CompressedPolishedStoneTiles.build("compressed_polished_stone_tiles","compressed_polished_stone_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder CompressedPolishedStoneTilesSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(3.0F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_STONE_TILES_SLAB=CompressedPolishedStoneTilesSlab.
-			build("compressed_polished_stone_tiles_slab", "compressed_polished_stone_tiles_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, COMPRESSED_POLISHED_STONE_TILES));
-
+		COMPRESSED_POLISHED_STONE_TILES       = make(compresseds.simple("compressed_polished_stone_tiles"));
+		COMPRESSED_POLISHED_STONE_TILES_SLAB  = make(compresseds.slab("compressed_polished_stone_tiles_slab", COMPRESSED_POLISHED_STONE_TILES));
 
 		// compressed polished netherrack
-		BlockBuilder CompressedPolishedNetherrack = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(0.8F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_NETHERRACK=CompressedPolishedNetherrack.build("compressed_polished_netherrack","compressed_polished_netherrack",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder CompressedPolishedNetherrackCarved = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(0.8F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_NETHERRACK_CARVED=CompressedPolishedNetherrackCarved.build("compressed_polished_netherrack_carved","compressed_polished_netherrack_carved",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder CompressedPolishedNetherrackSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(0.8F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		COMPRESSED_POLISHED_NETHERRACK_SLAB=CompressedPolishedNetherrackSlab.
-			build("compressed_polished_netherrack_slab", "compressed_polished_netherrack_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, COMPRESSED_POLISHED_NETHERRACK_CARVED));
+		compresseds.builder.setHardness(0.8F);
+		COMPRESSED_POLISHED_NETHERRACK        = make(compresseds.simple("compressed_polished_netherrack"));
+		COMPRESSED_POLISHED_NETHERRACK_CARVED = make(compresseds.simple("compressed_polished_netherrack_carved"));
+		COMPRESSED_POLISHED_NETHERRACK_SLAB   = make(compresseds.slab("compressed_polished_netherrack_slab", COMPRESSED_POLISHED_NETHERRACK_CARVED));
 
 
 		///////////////
 		/// SHOREDS ///
 		///////////////
 
+		final var shoreds = new BlockMetaDefinition.WithMaterial(Materials.DIRT, new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setHardness(0.6F)
+			.setTags(BlockTags.MINEABLE_BY_SHOVEL)
+			.setBlockSound(BlockSounds.GRAVEL));
 
 		// shored gravel
-		BlockBuilder ShoredGravel = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
-			.setHardness(0.6F)
-			.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-			.setBlockSound(BlockSounds.GRAVEL);
-		SHORED_GRAVEL=ShoredGravel.build("shored_gravel","shored_gravel",newBlockID(),b -> new BlockLogic(b, Materials.DIRT));
-
-		BlockBuilder ShoredGravelStairs = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
-			.setHardness(0.6F)
-			.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-			.setBlockSound(BlockSounds.GRAVEL);
-		SHORED_GRAVEL_STAIRS=ShoredGravelStairs.
-			build("shored_gravel_stair", "shored_gravel_stair",newBlockID(),
-				b -> new BlockLogicStairs(b, SHORED_GRAVEL));
-
-		BlockBuilder ShoredGravelSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
-			.setHardness(0.6F)
-			.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-			.setBlockSound(BlockSounds.GRAVEL);
-		SHORED_GRAVEL_SLAB=ShoredGravelSlab.
-			build("shored_gravel_slab", "shored_gravel_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, SHORED_GRAVEL));
-
+		SHORED_GRAVEL        = make(shoreds.simple("shored_gravel"));
+		SHORED_GRAVEL_STAIRS = make(shoreds.stairs("shored_gravel_stair", SHORED_GRAVEL));
+		SHORED_GRAVEL_SLAB   = make(shoreds.slab("shored_gravel_slab", SHORED_GRAVEL));
 
 		// shored sand
-		BlockBuilder ShoredSand = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
-			.setHardness(0.5F)
-			.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-			.setBlockSound(BlockSounds.SAND);
-		SHORED_SAND=ShoredSand.build("shored_sand","shored_sand",newBlockID(),b -> new BlockLogic(b, Materials.SAND));
+		shoreds.builder.setHardness(0.5F).setBlockSound(BlockSounds.SAND);
+		shoreds.material = Materials.SAND;
 
-		BlockBuilder ShoredSandStairs = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
-			.setHardness(0.5F)
-			.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-			.setBlockSound(BlockSounds.SAND);
-		SHORED_SAND_STAIRS=ShoredSandStairs.
-			build("shored_sand_stair", "shored_sand_stair",newBlockID(),
-				b -> new BlockLogicStairs(b, SHORED_SAND));
-
-		BlockBuilder ShoredSandSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
-			.setHardness(0.5F)
-			.setTags(BlockTags.MINEABLE_BY_SHOVEL)
-			.setBlockSound(BlockSounds.SAND);
-		SHORED_SAND_SLAB=ShoredSandSlab.
-			build("shored_sand_slab", "shored_sand_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, SHORED_SAND));
+		SHORED_SAND          = make(shoreds.simple("shored_sand"));
+		SHORED_SAND_STAIRS   = make(shoreds.stairs("shored_sand_stair", SHORED_SAND));
+		SHORED_SAND_SLAB     = make(shoreds.slab("shored_sand_slab", SHORED_SAND));
 
 
 		////////////////
@@ -440,114 +332,42 @@ public class SDOFBlocks {
 		////////////////
 
 
+		final var platings = new BlockMetaDefinition.WithMaterial(Materials.METAL, new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
+			.setHardness(1.5F)
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+			.setBlockSound(BlockSounds.METAL));
+
 		//iron plating
-		BlockBuilder IronPlating = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.METAL);
-		IRON_PLATING=IronPlating.build("iron_plating","iron_plating",newBlockID(),b -> new BlockLogic(b, Materials.METAL));
-
-		BlockBuilder IronPlatingSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.METAL);
-		IRON_PLATING_SLAB=IronPlatingSlab.
-			build("iron_plating_slab", "iron_plating_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, IRON_PLATING));
-
+		IRON_PLATING =       make(platings.simple("iron_plating"));
+		IRON_PLATING_SLAB =  make(platings.slab("iron_plating_slab", IRON_PLATING));
 
 		//steel plating
-		BlockBuilder SteelPlating = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.METAL);
-		STEEL_PLATING=SteelPlating.build("steel_plating","steel_plating",newBlockID(),b -> new BlockLogic(b, Materials.METAL));
-
-		BlockBuilder SteelPlatingSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.METAL);
-		STEEL_PLATING_SLAB=SteelPlatingSlab.
-			build("steel_plating_slab", "steel_plating_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, STEEL_PLATING));
+		STEEL_PLATING =      make(platings.simple("steel_plating"));
+		STEEL_PLATING_SLAB = make(platings.slab("steel_plating_slab", STEEL_PLATING));
 
 
 		///////////////////
 		/// SMALL TILES ///
 		///////////////////
 
-
 		//small marble tiles
-		BlockBuilder SmallMarbleTiles = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		SMALL_MARBLE_TILES=SmallMarbleTiles.build("small_marble_tiles","small_marble_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder SmallMarbleTilesStairs = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		SMALL_MARBLE_TILES_STAIRS=SmallMarbleTilesStairs.
-			build("small_marble_tiles_stair", "small_marble_tiles_stair",newBlockID(),
-				b -> new BlockLogicStairs(b, SMALL_MARBLE_TILES));
-
-		BlockBuilder SmallMarbleTilesSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		SMALL_MARBLE_TILES_SLAB=SmallMarbleTilesSlab.
-			build("small_marble_tiles_slab", "small_marble_tiles_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, SMALL_MARBLE_TILES));
-
+		SMALL_MARBLE_TILES =        make(stones.simple("small_marble_tiles"));
+		SMALL_MARBLE_TILES_STAIRS = make(stones.stairs("small_marble_tiles_stair", SMALL_MARBLE_TILES));
+		SMALL_MARBLE_TILES_SLAB =   make(stones.slab("small_marble_tiles_slab", SMALL_MARBLE_TILES));
 
 		//small lapis tiles
-		BlockBuilder SmallLapisTiles = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		SMALL_LAPIS_TILES=SmallLapisTiles.build("small_lapis_tiles","small_lapis_tiles",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
-		BlockBuilder SmallLapisTilesStairs = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		SMALL_LAPIS_TILES_STAIRS=SmallLapisTilesStairs.
-			build("small_lapis_tiles_stair", "small_lapis_tiles_stair",newBlockID(),
-				b -> new BlockLogicStairs(b, SMALL_LAPIS_TILES));
-
-		BlockBuilder SmallLapisTilesSlab = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.STONE))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		SMALL_LAPIS_TILES_SLAB=SmallLapisTilesSlab.
-			build("small_lapis_tiles_slab", "small_lapis_tiles_slab",newBlockID(),
-				b -> new BlockLogicSlab(b, SMALL_LAPIS_TILES));
+		SMALL_LAPIS_TILES =        make(stones.simple("small_lapis_tiles"));
+		SMALL_LAPIS_TILES_STAIRS = make(stones.stairs("small_lapis_tiles_stair", SMALL_LAPIS_TILES));
+		SMALL_LAPIS_TILES_SLAB =   make(stones.slab("small_lapis_tiles_slab", SMALL_LAPIS_TILES));
 
 
 		/////////////////////
 		/// MISCELLANEOUS ///
 		/////////////////////
 
-
 		//vent block
-		BlockBuilder VentBlock = new BlockBuilder((MOD_ID))
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
-			.setHardness(1.5F)
-			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
-			.setBlockSound(BlockSounds.STONE);
-		VENT_BLOCK=VentBlock.build("vent_block","vent_block",newBlockID(),b -> new BlockLogic(b, Materials.STONE));
-
+		VENT_BLOCK = make(stones.simple("vent_block"));
 
 		SDOF.LOGGER.info("SDOF blocks initialized");
 	}

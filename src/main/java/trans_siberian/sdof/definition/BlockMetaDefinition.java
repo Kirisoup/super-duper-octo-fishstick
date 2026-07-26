@@ -9,12 +9,14 @@ import net.minecraft.core.block.BlockLogicSupplier;
 import net.minecraft.core.block.material.Material;
 import turniplabs.halplibe.helper.BlockBuilder;
 
-public final record BlockMetaDefinition(
-	@NotNull Material materialOverride,
-	@NotNull BlockBuilder builder
-) {
-	public @NotNull BlockDefinition.Simple simple(final @NotNull String nameKey) {
-		return new BlockDefinition.Simple(this.builder, nameKey, this.materialOverride);
+public class BlockMetaDefinition {
+	public final @NotNull BlockBuilder builder;
+	public BlockMetaDefinition(@NotNull BlockBuilder builder) {
+		this.builder = builder;
+	}
+
+	public @NotNull BlockDefinition.Simple simple(final @NotNull String nameKey, @NotNull Material material) {
+		return new BlockDefinition.Simple(this.builder, nameKey, material);
 	}
 
 	public @NotNull <Logic extends BlockLogic> BlockDefinition.Custom<Logic> custom(
@@ -51,4 +53,18 @@ public final record BlockMetaDefinition(
 	) {
 		return new BlockDefinition.Tiles(builder, nameKey, base);
 	}
+
+
+	public static class WithMaterial extends BlockMetaDefinition {
+		public @NotNull Material material;
+		public WithMaterial(@NotNull Material material, @NotNull BlockBuilder builder) {
+			super(builder);
+			this.material = material;
+		}
+
+		public @NotNull BlockDefinition.Simple simple(final @NotNull String nameKey) {
+			return new BlockDefinition.Simple(this.builder, nameKey, this.material);
+		}
+	}
+
 }
