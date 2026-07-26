@@ -17,6 +17,7 @@ Currently includes:
 <br>
 <br>
 Credits:<br>
-Velvet (@trans_siberian) - programming<br>
+velvet (@trans_siberian) - programming<br>
 diana (@dianaisnthere) - textures and some programming<br>
+Kirisame Soup (@kirisoup) - programming<br>
 camoweed (@camoweed_) - bta block example mod, programming help
