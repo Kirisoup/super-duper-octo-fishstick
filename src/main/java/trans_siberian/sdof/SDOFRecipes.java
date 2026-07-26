@@ -181,7 +181,7 @@ public class SDOFRecipes {
 			.create("polished_checkered_tiles_stairs", new ItemStack(SDOFBlocks.POLISHED_CHECKERED_TILES_STAIRS, 6));
 
 		RecipeBuilder.Shaped(MOD_ID, "###")
-			.addInput('#', SDOFBlocks.POLISHED_MARBLE_TILES)
+			.addInput('#', SDOFBlocks.POLISHED_CHECKERED_TILES)
 			.create("polished_checkered_tiles_slab", new ItemStack(SDOFBlocks.POLISHED_CHECKERED_TILES_SLAB, 6));
 
 		SDOF.LOGGER.info("SDOF recipes initialized");
