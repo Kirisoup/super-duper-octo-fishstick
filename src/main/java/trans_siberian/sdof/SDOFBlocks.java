@@ -116,8 +116,6 @@ public class SDOFBlocks {
 	public static Block<?> COMPRESSED_COBBLESTONE_MOSSY_CARVED;
 	public static Block<BlockLogicSlab> COMPRESSED_COBBLESTONE_MOSSY_SLAB;
 
-	public static final List<BlockDefinition<?>> blocks = new ArrayList<>();
-
 	//compressed polished stone
 	public static Block<?> COMPRESSED_POLISHED_STONE;
 	public static Block<?> COMPRESSED_POLISHED_STONE_CARVED;
@@ -172,7 +170,13 @@ public class SDOFBlocks {
 	//vent block
 	public static Block<?> VENT_BLOCK;
 
+	public static final List<BlockDefinition<?>> blocks = new ArrayList<>();
 
+	// this method conveniently adds the definition to a list and then return the block
+	// of the definition.
+	// storing them to a centrallized list allow us to iterate through them and
+	// automatically do fascinating things with them, without having to
+	// manually do it one by one
 	private static <Logic extends BlockLogic> @NotNull Block<Logic> make(
 		final @NotNull BlockDefinition<Logic> definition
 	) {

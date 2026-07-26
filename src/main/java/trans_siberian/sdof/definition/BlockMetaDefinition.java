@@ -9,6 +9,9 @@ import net.minecraft.core.block.BlockLogicSupplier;
 import net.minecraft.core.block.material.Material;
 import turniplabs.halplibe.helper.BlockBuilder;
 
+// This is a convenience type, containing a reused BlockBuilder, and using it to
+// instantiate BlockDefinitions (hence the name)
+
 public class BlockMetaDefinition {
 	public final @NotNull BlockBuilder builder;
 	public BlockMetaDefinition(@NotNull BlockBuilder builder) {

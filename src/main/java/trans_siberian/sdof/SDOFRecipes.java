@@ -30,8 +30,13 @@ public class SDOFRecipes {
 
 		final var workbenchGroup = RecipeBuilder.getRecipeGroup(MOD_ID, "workbench", null);
 
+		// by having this here, we skip the need to manually add every recipes
+		// line-by-line!
+		// currently only stairs, slabs, bricks and tiles are handled here
 		for (final var block : SDOFBlocks.blocks) {
 			if (block instanceof BlockDefinition.IWorkbenchRecipe recipe &&
+				// this makes it possible to skip the "default" recipes
+				// (of, e.g. a specific brick) by creating them from above.
 				workbenchGroup.getItem(block.nameKey) == null
 			) {
 				recipe.makeWorkbenchRecipe();
